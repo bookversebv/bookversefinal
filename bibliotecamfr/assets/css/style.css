@@ -1,0 +1,348 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Dreaming+Outloud&display=swap);
+    body {
+        background-color: #fdf6f4;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Cabeçalho com Navegação */
+header {
+background-color: #9bd598;
+padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 1000; /* Garantir que o cabeçalho não sobreponha o carrossel */
+}
+
+/* Modal - inicial oculto */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Botão de Fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Estilos de Hover e Focus do Link no Cabeçalho */
+nav a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    margin-right: 15px;
+    position: relative;
+    display: inline-block; /* Para garantir que o link seja tratado como um bloco */
+    right: 3rem;
+}
+
+/* Barra de animação de hover */
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 9px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease; /* Animação suave do aumento de largura */
+}
+
+.nav-links{
+    left: 10px;
+}
+
+nav a:hover::after {
+    width: 100%; 
+}
+
+
+    .logo img {
+        height: 60px; /* Ajustando a logo para não aumentar o cabeçalho */
+        object-fit: cover;
+        transform: scale(2.5);
+        width: auto;
+        margin-left: 3rem;
+    }
+
+    /* Estilos para os ícones de navegação */
+.icons a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    display: inline-block; /* Garante que os ícones sejam tratados como blocos */
+    margin-left: 15px;
+}
+
+/* Barra de animação de hover para os ícones */
+.icons a::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease; /* Animação suave da barra */
+}
+
+.icons a:hover::after {
+    width: 100%; 
+}
+
+    /* Barra de Pesquisa */
+    .search-bar {
+        margin: 30px auto;
+        right: 3rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 30%; 
+    }
+
+    .search-bar input {
+        padding: 8px 40px 8px 15px; 
+        border: 2px solid #000; 
+        border-radius: 30px;
+        width: 100%; /* O input ocupa toda a largura do container */
+        outline: none;
+        font-size: 1rem;
+        background-color: transparent;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .search-bar button {
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        color: #000; /* Cor preta para o ícone */
+        cursor: pointer;
+        padding: 0;
+        position: absolute; /* A lupa dentro da barra */
+        right: 10px; /* Lupa posicionada à direita */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+    }
+
+    .search-bar button:hover {
+        color: darkgray; /* Cor da lupa quando o botão é hover */
+    }
+
+    body {
+        background-color: #fdfaf3;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .titulo-planos {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #9bd598;
+        font-family: 'TT Octosquares', cursive;
+        text-decoration: underline;
+        margin-bottom: 20px;
+        margin-left: 92px;
+    }
+    
+    
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+ 
+    .planos {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+    
+    .taxas {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .card {
+        border: 2px solid #6aa76a;
+        border-radius: 15px;
+        text-align: center;
+        background-color: transparent;
+        padding: 20px;
+        box-shadow: none;
+        width: 440px;
+        height: 340px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    
+    h2, h4, h5 {
+        color: #6aa76a;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    h4 {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    
+    ul {
+        text-align: left;
+        list-style-type: none;
+        padding: 0;
+        margin-top: 5px;
+    }
+    
+    .taxas ul {
+        margin-top: 0;
+    }
+    
+    ul li {
+        font-size: 16px;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+    }
+    
+    ul li::before {
+        content: "✔";
+        color: #6aa76a;
+        font-weight: bold;
+        margin-right: 8px;
+    }
+    
+    h5 {
+        font-size: 20px;
+        margin-top: 10px;
+        align-self: center;
+    }
+    
+    button {
+        width: 60px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #6aa76a;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s;
+        margin-top: auto;
+        align-self: center;
+    }
+    
+    button:hover {
+        background-color: #5a965a;
+    }
+    
+    /* Carrossel */
+    .carousel-container {
+        margin: 30px auto;
+        max-width: 90%;
+        position: relative;
+        padding: 20px;
+    }
+
+    .carousel-track {
+        display: flex;
+        overflow: hidden;
+        gap: 20px; /* Ajuste do espaçamento */
+    }
+
+    .carousel-item {
+        flex: 0 0 auto;
+        width: 270px; /* Ajuste do tamanho do item */
+        height: 150px; /* Ajuste da altura */
+        background-color: white;
+        border: 1px solid #000; /* Ajuste da borda preta */
+        text-align: center;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Faz as imagens ocuparem todo o espaço */
+    }
+
+    /* Botões de Navegação */
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        color: black;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 10;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .carousel-btn:hover {
+        background-color: gainsboro;
+        color: white;
+    }
+
+    .btn-prev {
+        left: -40px;
+    }
+
+    .btn-next {
+        right: -40px;
+    }
+
+    /* Títulos e ícones */
+    .carousel-header {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #9bd598 ;
+        font-family: 'TT Octosquares', cursive;
+        text-decoration: underline;
+    }
