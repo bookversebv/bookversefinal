@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Detalhes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+
+  <!-- Menu da página -->
+      <header class="d-flex justify-content-between align-items-center">
+        <div class="logo">
+            <img src="ifma.png" alt="" width="70px">
+        </div>
+
+  <!-- Div referente aos ícones -->
+        <div class="icons">
+            <a href="#" class="bi bi-list" title="Menu"></a>
+            <a class="foto-perfil"> <img src="../imgs/ratue.jpg" width="30px" height="30px"></a>
+            <a href="#" class="bi bi-gear-fill" title="Config"></a>
+            <a href="#" class="bi bi-house-door-fill" title="Home"></a>
+        </header>
+        </div>
+
+  <!-- Link de acesso do scrpit no bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Div referente ao título da página -->
+   <div class="titulo-container">
+   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+    <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"/>
+  </svg>
+  <h2 class="titulo">Detalhes</h2>
+   </div>
+   <hr>
+
+  <!-- Imagem do livro -->
+    <img src="livroimg/livro9.jpg" width="12%" id="livro">
+
+  <!-- Div referente as informações do livro -->
+  <div class="livro-container">
+    <p class="nome-livro">MEMÓRIAS DE UM SARGENTO DE MILÍCIAS - Manuel Antônio de Almeida</p>
+  <p>A obra conta a história de Leonardo quando ele era pequeno e aprontava travessuras, e que posteriormente veio a se tornar um sargento de milícias. O espaço físico apresentado na obra é o meio urbano brasileiro do século XIX. A história se passa no Rio de Janeiro, e descreve seus principais pontos, como igrejas, principais ruas, mas descreve também pontos bem à margem da sociedade.</p>
+  </div>
+
+  <!-- Botão de favorito -->
+  <button class="botao-favorito" id="favoritoBotao" aria-label="Adicionar aos favoritos">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+      <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
+    </svg>
+  </button>
+
+  <!-- Div refernte ao Vlibras-->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <!-- Div referente as informações do autor -->
+  <div class="autor-container">
+  <p class="nome-autor">Sobre o autor:</p>
+  <p>Manuel Antônio de Almeida, nasceu no dia 17 de novembro de 1831, no Rio de Janeiro. Estudou na Academia de Belas-Artes e, com 17 anos, ingressou no Curso de Medicina, na Faculdade de Medicina da Corte, graduando-se em 1855. Foi um importante escritor da primeira geração romântica, fase marcada pelo binômio nacionalismo-indianismo. Além disso, foi patrono da Cadeira n° 28 e ainda exerceu a profissão de professor e jornalista.</p>
+</div>
+
+  <!-- Imagem do autor -->
+<img src="autorimg/autor9.jpg" width="10%" id="autor">
+
+<!-- Div referente as informações do ilustrador -->
+<div class="ilustrador-container">
+  <p class="nome-ilustrador">Sobre o ilustrador/Designer gráfico:</p>
+  <p>Adelaide Carolina Cerutti estudou Design Gráfico na instituição de ensino Centro Universitário Belas Artes de São Paulo. Ela trabalhou como editora de arte na empresa FTD Educação entre agosto de 2007 a maio de 2009.</p>
+</div>
+
+<!-- Imagem do ilutrador -->
+<img src="img/ilustrador5.jpg" width="10%" id="ilustrador">
+<hr>
+
+<!-- Ação script em relação ao botão de favoritos-->
+  <script>
+    const botaoFavorito = document.getElementById('favoritoBotao');
+
+    // Adiciona evento de clique
+    botaoFavorito.addEventListener('click', function () {
+      // Alterna a classe 'favoritado'
+      this.classList.toggle('favoritado');
+
+      // Exemplo de ação adicional (exibir estado no console)
+      if (this.classList.contains('favoritado')) {
+        console.log('Adicionado aos favoritos');
+      } else {
+        console.log('Removido dos favoritos');
+      }
+    });
+    </script>
+
+<!-- Div referente as avaliações através das estrelas-->
+<div class="box-avaliar">
+<h1 class="avaliar">Avalie</h1>
+<form method="post" action="processa.php">
+
+  <div class="estrelas">
+
+  <input type="radio" id="vazio" name="estrela" value="" checked>
+
+  <label for="estrela_um"><i class="opcao bi"></i></label>
+  <input type="radio" name="estrela" id="estrela_um" id="vazio"value="1">
+
+  <label for="estrela_dois"><i class="opcao bi"></i></label>
+  <input type="radio" name="estrela" id="estrela_dois" id="vazio" value="2">
+
+  <label for="estrela_tres"><i class="opcao bi"></i></label>
+  <input type="radio" name="estrela" id="estrela_tres" id="vazio" value="3">
+
+  <label for="estrela_quatro"><i class="opcao bi"></i></label>
+  <input type="radio" name="estrela" id="estrela_quatro" id="vazio" value="4">
+
+  <label for="estrela_cinco"><i class="opcao bi"></i></label>
+  <input type="radio" name="estrela" id="estrela_cinco" id="vazio" value="5"><br><br>
+
+  <!-- Botão de avaliar-->
+  <input type="submit" value="Avaliar"><br><br>
+
+</div>
+</form>
+</div>
+
+</body>
+</html>

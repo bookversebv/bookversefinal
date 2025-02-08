@@ -1,0 +1,221 @@
+
+/* Link de acesso das fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'dreaming';
+    src: url(fontes/dreaming-outloud-regular.otf);}
+
+
+/*  Configurações gerais*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fef9f5;
+}
+
+
+/*Estilização do menu*/
+header{
+    background-color: forestgreen;
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+}
+
+.foto-perfil { 
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/*Estilização dos ícones do menu*/
+.icons a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  margin-left: 15px;
+  position: relative;
+}
+
+.icons a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icons a:hover::after {
+  transform: scaleX(1);
+}
+
+
+/*Estilização da linha*/
+hr {
+  border-color: #074425;
+  border-width: 1.9px; 
+  border-style: solid; 
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+/*Estilização da div referente ao título da página*/ 
+.titulo-container {
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    margin-top: 70px;
+  }
+
+  .bi-caret-left {
+    width: 30px;
+    height: 30px;
+    margin-left: 2%;
+    color: forestgreen;
+  }
+
+
+  /*Estilização geral dos textos da página*/
+  h2.titulo {
+    margin: 0;
+  }
+
+  .titulo{
+    font: bold 40px/20px 'dreaming';
+    color: forestgreen;
+    text-transform: uppercase;
+  }
+
+  p{
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+    font-size: 1.25rem;
+    
+ }
+
+
+/*Estilização da imagem do livro*/
+ #livro{
+    float: left;
+    margin-left: 3%;
+    margin-top: 3%;
+    border: 2px solid forestgreen;
+    border-radius: 5px;
+    padding: 6px;
+    margin-right: 6%;
+ }
+
+
+/*Estilização da div referente as informações do livro*/
+ .nome-livro{
+    font: bold 40px/20px 'dreaming';
+    color: forestgreen;
+    font-size: 1.8rem;
+ }
+
+ .livro-container {  
+    max-width: 1200px;
+    margin-top: 5%;
+  }
+
+
+  /*Estilização do botão de favorito*/
+  .botao-favorito {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 24px;
+    color: rgb(113, 113, 113);
+    transition: color 0.3s ease;
+    margin-left: -4%;
+    margin-top: 5%;
+  }
+
+  .botao-favorito.favoritado {
+    color: forestgreen;
+  }
+
+  .bi-suit-heart-fill{
+    width: 25px;
+    height: 25px;
+  }
+
+
+/*Estilização da div referente as informações do autor*/ 
+  #autor{
+    margin-left: 3%;
+    border: 2px solid forestgreen;
+    border-radius: 14px;
+    padding: 4px;
+    margin-bottom: 1%;
+  }
+
+  .autor-container{ 
+    max-width: 1200px;
+    margin-top: 3%;
+    margin-left: 3%;
+  }
+
+  .nome-autor{
+    font: bold 40px/20px 'dreaming';
+    color: forestgreen;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+
+  /*Estilização da div referente as informações do ilustrador*/ 
+  #ilustrador{
+    margin-left: 3%;
+    border: 2px solid forestgreen;
+    border-radius: 14px;
+    padding: 4px;
+    margin-bottom: 1%;
+  }
+  .ilustrador-container{ 
+    max-width: 1200px;
+    margin-top: 2%;
+    margin-left: 3%;
+  }
+
+  .nome-ilustrador{
+    font: bold 40px/20px 'dreaming';
+    color: forestgreen;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  
+  /*Estilização da div referente as informações do tradutor*/ 
+  #tradutor{
+    margin-left: 3%;
+    border: 2px solid forestgreen;
+    border-radius: 14px;
+    padding: 4px;
+    margin-bottom: 1%;
+  }
+  .tradutor-container{ 
+    max-width: 1200px;
+    margin-top: 2%;
+    margin-left: 3%;
+  }
+
+  .nome-tradutor{
+    font: bold 40px/20px 'dreaming';
+    color: forestgreen;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
