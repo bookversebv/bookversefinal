@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel Ajustado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+@font-face {
+  font-family: 'TT Octosquares';
+  src: url('assets/fonts/tt_octosquares/TT\ Octosquares\ Trial\ Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+ }
+</style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Logo">
+        </div>
+        <nav>
+          <a href="LoginPage.php">Cadastre-se</a>
+          <a href="quem_somos.html">Quem Somos</a>
+          <a href="#" id="contact-link">Contato</a>
+      </nav>
+        <div class="icons">
+            <a href="#" class="bi bi-person-circle" aria-label="Perfil"></a>
+            <a href="#" class="bi bi-gear-fill" aria-label="Configurações"></a>
+            <a href="#" class="bi bi-house-fill" aria-label="Página Inicial"></a>
+        </div>
+
+<!-- Modal de Contato -->
+<div id="contact-modal" class="modal">
+  <div class="modal-content">
+      <span class="close-btn" id="close-btn">&times;</span>
+      <h2>Informações de Contato</h2>
+      <p>Para entrar em contato, envie um e-mail para: contato@exemplo.com</p>
+      <p>Ou ligue para o número: (11) 1234-5678</p>
+  </div>
+</div>
+    </header>
+
+
+    <!-- Barra de Pesquisa -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar livro">
+        <button onclick="search()"><i class="bi bi-search"></i></button>
+    </div>
+
+    <!-- Carrossel -->
+    <div class="carousel-container">
+        <div class="carousel-header">BIBLIOTECAS</div>
+        <button class="carousel-btn btn-prev" onclick="scrollCarousel(-1)" aria-label="Anterior">&#8249;</button>
+        <div class="carousel-track" id="carousel-track">
+            <!-- Elementos do carrossel -->
+            <div class="carousel-item">
+                <img src="assets/img/ccsp.png" alt="Item 1">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/benedito.png" alt="Item 2">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/uema.png" alt="Item 3">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/ufma.png" alt="Item 4">
+            </div>
+            <div class="carousel-item">
+                <a href="bibliotecamfr/teste.php"><img src="assets/img/ifmaa.png" alt="Item 5"></a>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/bibliotecas.png" alt="Item 6">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/bibliotecas2.png" alt="Item 7">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/bibliotecas3.png" alt="Item 8">
+            </div>
+        </div>
+        <button class="carousel-btn btn-next" onclick="scrollCarousel(1)" aria-label="Próximo">&#8250;</button>
+    </div>
+    <h1 class="titulo-planos">PLANOS</h1>
+    <div class="container">
+        <div class="planos">
+            <div class="card">
+                <h4>Anual</h4>
+                <ul class="text-planos">
+                    <li>Espaço para 800 livros</li>
+                    <li>Pague apenas 11 meses</li>
+                    <li>Três meses de personalização gratuita</li>
+                    <li>Suporte ao cliente</li>
+                    <li>Eficiência e organização</li>
+                </ul>
+                <h5>R$ 41.250,00</h5>
+                <button>➜</button>
+            </div>
+            <div class="card">
+                <h4>Mensal</h4>
+                <ul class="text-planos">
+                    <li>Espaço para 500 livros</li>
+                    <li>Suporte ao cliente</li>
+                    <li>Eficiência e organização</li>
+                </ul>
+                <h5>R$ 3.750,00</h5>
+                <button>➜</button>
+            </div>
+        </div>
+
+        <div class="taxas">
+            <div class="card">
+                <h4>Biblioteca Personalizada</h4>
+                <ul class="text-taxas">
+                    <li>Escolha para design</li>
+                    <li>Participação no processo de criação</li>
+                    <li>Mais autenticidade para o cliente</li>
+                    <li>Prazo de duas semanas para entrega</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Mais Espaço para os Livros</h4>
+                <ul class="text-taxas">
+                    <li>Adicione mais livros no acervo</li>
+                    <li>500 livros extras</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
